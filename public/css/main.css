@@ -2,6 +2,7 @@
 
 h1.title {
     font-family: 'Great Vibes', cursive;
+    animation: fadeIn 2s ease-in-out forwards
 }
 
 * {
@@ -35,6 +36,18 @@ body {
   align-items: center;
   justify-content: center;
 }
+.background-blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/DSC02533.JPG');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* 背景のみにぼかしを適用 */
+  z-index: 1; /* 背景を文字の背後に配置 */
+}
 .top-wrapper {
   position: absolute;
   top: 50%;
@@ -42,10 +55,16 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+  z-index: 10; 
 }
-h1.title {
+/* h1.title {
   font-size: 48px;
   color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+} */
+h1.title {
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 }
 .top-detail {
@@ -64,10 +83,33 @@ h1.title {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     font-weight: bold;
 } */
-p.detail {
+/* p.detail {
     color: #34495e;
     font-size: 18px; 
     margin-top: 10px; 
+} */
+
+p.detail {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 
