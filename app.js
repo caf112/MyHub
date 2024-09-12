@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
@@ -39,4 +40,7 @@ app.post('/create',(req,res) => {
     );
 });
 
-app.listen(3000);
+app.listen(port, () => {
+    // console.log(`Server is running at http://localhost:${port}`);
+    console.log(`\x1b[4m\x1b[36m%s\x1b[0m`, `http://localhost:${port}`);
+});
