@@ -1,0 +1,20 @@
+# Node.jsの依存パッケージを無視
+node_modules/
+
+# ログファイルを無視
+*.log
+
+# OS固有のファイルを無視
+.DS_Store
+
+# 一時ファイルやIDEの設定ファイルを無視
+*.tmp
+.idea/
+.vscode/
+
+# 環境変数ファイル
+.env
+
+# ビルド成果物
+dist/
+build/
