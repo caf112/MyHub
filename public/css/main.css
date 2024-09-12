@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-h1.title {
-    font-family: 'Great Vibes', cursive;
-    animation: fadeIn 2s ease-in-out forwards
-}
 
 * {
     padding: 0;
@@ -42,7 +38,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/images/DSC02533.JPG');
+  background-image: url('/images/background.JPG');
   background-size: cover;
   background-position: center;
   filter: blur(5px); /* 背景のみにぼかしを適用 */
@@ -62,10 +58,20 @@ body {
   color: #ffffff;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
 } */
-h1.title {
+/* h1.title {
   font-size: 48px;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+} */
+h1.title {
+  font-family: 'Great Vibes', cursive;
+  animation: fadeIn 2s ease-in-out forwards;
+  font-size: 48px;
+  color: rgba(255, 255, 255, 0.9);  /* 白に近い色でコントラストを強調 */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);  /* 黒い影を強調して視認性を向上 */
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.4);  /* 背景に薄い黒を追加してさらにテキストを見やすく */
+  border-radius: 5px;
 }
 .top-detail {
     flex: 1;
@@ -89,7 +95,7 @@ h1.title {
     margin-top: 10px; 
 } */
 
-p.detail {
+/* p.detail {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.85);
@@ -101,8 +107,21 @@ p.detail {
   padding: 10px 20px;
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
+} */
+p.detail {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.85);  /* 少し透明度を持たせた白 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);  /* こちらも影を追加 */
+  line-height: 1.6;
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);  /* `p`にも黒の背景を追加 */
+  border-radius: 5px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -147,6 +166,7 @@ p.detail {
     color: transparent;
     transition-delay: 0.5s;
     filter: drop-shadow(0 0 2px var(--clr));
+    /* filter: drop-shadow(0 0 2px #666666); */
   }
   .menu.active a {
     color: var(--clr);
@@ -167,7 +187,6 @@ p.detail {
     height: 50px;
     background: #e0e0e0;
     border: 2px solid var(--clr);
-    border: 2px solid var(--clr); 
     transform: rotate(calc(0 * var(--i)));
     transition: transform 0.5s, height 0.5s, width 0.5s;
     transition-delay: 0.5s, 1.5s, 1.5s;
@@ -186,7 +205,7 @@ p.detail {
     position: absolute;
     width: 60px;
     height: 60px;
-    color: #2c3e50;
+    color: #ffffff;
     /* background-color: #2c3e50; */
     display: flex;
     align-items: center;
