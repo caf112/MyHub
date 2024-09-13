@@ -11,19 +11,18 @@ body {
 }
 h1.title {
     font-family: 'Great Vibes', cursive;
-    font-size: 60px; /* タイトルのフォントサイズを大きくしてインパクトを強化 */
+    font-size: 60px; 
     color: rgba(255, 255, 255, 0.9);
-    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7); /* 影をさらに強調 */
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7); 
     padding: 20px;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)); /* 斜めのグラデーションを背景に追加 */
-    border-radius: 10px; /* 角をさらに丸くして柔らかさを強調 */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* タイトル自体に影を追加 */
-    margin-bottom: 30px; /* タイトルの下に余白を追加 */
-    animation: fadeInUp 2s ease-in-out forwards; /* 上からフェードインするアニメーション */
-    letter-spacing: 2px; /* 文字間隔を広げてエレガントに */
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    margin-bottom: 30px; 
+    animation: fadeInUp 2s ease-in-out forwards; 
+    letter-spacing: 2px; 
 }
 
-/* フェードインアニメーション */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
