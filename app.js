@@ -3,8 +3,17 @@ const mysql = require('mysql');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(express.static('public'));
+const path = require('path');
+const images = [
+    { path: '/images/b1.JPG', name: 'Image 1' },
+    { path: '/images/b2.JPG', name: 'Image 2' },
+    { path: '/images/background.JPG', name: 'Image 3' }
+  ];
+
+// app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}));
+app.set('view engine', 'ejs');
 
 const connection = mysql.createConnection({
     host: 'localhost',
@@ -16,6 +25,10 @@ const connection = mysql.createConnection({
 app.get('/',(req,res) => {
     res.render('top.ejs');
 });
+
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio', { images: images });
+  });
 
 app.get('/index',(req,res) => {
     connection.query(
@@ -41,6 +54,5 @@ app.post('/create',(req,res) => {
 });
 
 app.listen(port, () => {
-    // console.log(`Server is running at http://localhost:${port}`);
     console.log(`\x1b[4m\x1b[36m%s\x1b[0m`, `http://localhost:${port}`);
 });
