@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/portfolio.css">
+    <link rel="stylesheet" href="/css/photo_gallery.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <script src="/js/gallery_modal.js"></script>
     <title>MyHub</title>
 </head>
 <body>
-    <header class="container-header">
+    <header class="header-container">
         <div class="site-icon-container">
             <a href="/" class="site-icon">MyHub</a>
         </div>
@@ -15,16 +17,16 @@
             <a href="/mypage" class="nav-mypage">マイページ</a>
         </div>
     </header>
-    <div class="portfolio-header">
+    <div class="photo-header">
         <h1 class="title">PhotoGallery</h1>
         <p>場所毎の写真</p>
     </div>
-    <div class="portfolio-gallery">
-        <div class="portfolio-folder-wrapper">
-            <div class="portfolio-folder">
-                <img src="/images/b1.JPG" alt="Portfolio Image 1" class="folder-image">
-                <img src="/images/b2.JPG" alt="Portfolio Image 2" class="folder-image">
-                <img src="/images/background.JPG" alt="Portfolio Image 3" class="folder-image">
+    <div class="photo-gallery">
+        <div class="photo-folder-wrapper">
+            <div class="photo-folder">
+                <img src="/images/b1.JPG" alt="photo Image 1" class="folder-image">
+                <img src="/images/b2.JPG" alt="photo Image 2" class="folder-image">
+                <img src="/images/background.JPG" alt="photo Image 3" class="folder-image">
             </div>
             <p class="gallery-title">9月</p>
         </div>
@@ -36,6 +38,5 @@
         <div class="next" id="next" onclick="changeImage(1)">&#10095;</div>
         <p class="gallery-title">9月</p>
     </div>
-    <script src="/js/gallery_modal.js"></script>
 </body>
 </html>
