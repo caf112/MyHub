@@ -1,29 +1,5 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     const folderImages = document.querySelectorAll('.portfolio-folder .folder-image');
-//     const modal = document.getElementById("modal");
-//     const modalImg = document.getElementById("modalImg");
-//     const closeModal = document.getElementsByClassName("close")[0];
-
-//     folderImages.forEach((image, index) => {
-//         image.addEventListener('click', function() {
-//             modal.style.display = "block";
-//             modalImg.src = this.src;
-//         });
-//     });
-
-//     closeModal.onclick = function() {
-//         modal.style.display = "none";
-//     }
-
-//     window.onclick = function(event) {
-//         if (event.target == modal) {
-//             modal.style.display = "none";
-//         }
-//     }
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
-    const folderImages = document.querySelectorAll('.portfolio-folder .folder-image');
+    const folderImages = document.querySelectorAll('.photo-folder .folder-image');
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modalImg");
     const closeModal = document.getElementsByClassName("close")[0];

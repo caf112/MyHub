@@ -1,5 +1,4 @@
 const express = require('express');
-const mysql = require('mysql');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -15,29 +14,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}));
 app.set('view engine', 'ejs');
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '0361',
-    database: 'myhub_db'
-});
-
 app.get('/',(req,res) => {
     res.render('top.ejs');
 });
 
-app.get('/portfolio', (req, res) => {
-    res.render('portfolio', { images: images });
+app.get('/home',(req,res) => {
+    res.render('home.ejs');
+});
+
+app.get('/photo_gallery', (req, res) => {
+    res.render('photo_gallery', { images: images });
   });
 
-app.get('/index',(req,res) => {
-    connection.query(
-        'SELECT * FROM items',
-        (error,results) => {
-            res.render('index.ejs',{items: results});
-        }
-    );
-});
+// app.get('/home',(req,res) => {
+//     connection.query(
+//         'SELECT * FROM items',
+//         (error,results) => {
+//             res.render('home.ejs',{items: results});
+//         }
+//     );
+// });
 
 app.get('/new',(req,res) => {
     res.render('create.ejs');
