@@ -59,3 +59,66 @@
 }
 
 
+/* 経歴コンテナ */
+.career-container {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 各経歴をカード形式で表示 */
+.career-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-left: 4px solid #2c3e50; /* 左にラインを付けてタイムラインを表現 */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.career-card:hover {
+    transform: translateY(-5px); /* カードが浮き上がるホバー効果 */
+}
+
+/* 職歴のタイトル */
+.career-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* 期間部分 */
+.career-card .career-period {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* 職務内容の説明 */
+.career-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #34495e;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* タイムライン用のマーク */
+.timeline-marker {
+    width: 12px;
+    height: 12px;
+    background-color: #2c3e50;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    top: 10px;
+}
+
