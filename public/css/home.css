@@ -1,13 +1,9 @@
 .main-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* 中央に配置 */
     align-items: flex-start;
     width: 80%;
     margin: 40px auto;
-}
-
-.aboutme-container, .todo-container {
-    width: 48%; 
 }
 
 .aboutme-container {
@@ -17,45 +13,128 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.profile-container {
+    display: flex; /* 経歴とスキルを横並びに */
+    justify-content: space-between; /* スペースを均等に */
+}
+
+.career-container {
+    width: 48%; /* 経歴エリアの幅 */
+}
+
+.skill-container {
+    width: 48%; /* スキルエリアの幅 */
+}
+
+/* TODOリストのスタイル */
+/* TODOリストのスタイル */
 .todo-container {
     background-color: #f1f1f1;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* 上のコンテナとの間隔 */
 }
 
-.aboutme-container h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 48px;
-    color: #2c3e50;
+
+/* スキルのスタイル（既存のものをそのまま使用） */
+.skill-bar {
+    display: inline-block;
+    width: 60%;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 15px;
+    position: relative;
 }
-.aboutme-container p {
+
+.skill-bar div {
+    height: 100%;
+    background-color: #2ecc71;
+    border-radius: 8px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* 経歴コンテナ */
+.career-container {
+    width: 48%; /* 左側の経歴エリアの幅 */
+    margin-right: 20px; /* スキルエリアとの間隔 */
+}
+
+/* 各経歴をカード形式で表示 */
+.career-card {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* カードの背景色 */
+    margin-bottom: 20px; /* カード間のスペース */
+    padding: 20px; /* カードの内側のスペース */
+    border-radius: 8px; /* 角を丸くする */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* カードの影 */
+    transition: transform 0.3s ease; /* ホバー時の効果 */
+}
+
+.career-card:hover {
+    transform: translateY(-5px); /* ホバー時に少し浮き上がる */
+}
+
+/* 職歴のタイトル */
+.career-card h3 {
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* 期間部分 */
+.career-card .career-period {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* 職務内容の説明 */
+.career-card p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
     color: #34495e;
+    margin-top: 10px;
     line-height: 1.6;
 }
 
-.todo-container ul {
-    list-style-type: none;
-    padding: 0;
+/* タイムライン用のマーク */
+.timeline-marker {
+    width: 12px;
+    height: 12px;
+    background-color: #2c3e50;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px; /* マーカーの位置調整 */
+    top: 10px; /* マーカーの位置調整 */
 }
-.todo-container li {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    margin: 10px 0;
-    padding: 10px;
+
+/* スキルセクション全体のスタイル */
+.skill-container {
     background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
-.todo-container li:hover {
-    background-color: #f9f9f9;
-}
-.todo-container li.completed {
-    text-decoration: line-through;
-    color: #aaa;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* 各スキルグループをカード形式で表示 */
+.skill-card {
+    background-color: #f9f9f9; /* カードの背景色 */
+    border-radius: 8px; /* 角を丸くする */
+    padding: 20px; /* カードの内側のスペース */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* カードの影 */
+    margin-bottom: 20px; /* カード間のスペース */
+}
 
+/* スキルのタイトル */
+.skill-group h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
